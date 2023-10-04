@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: day-3-app
-          image: test5532/shopping-cart:${IMAGE_TAG}
+          image: test5532/shopping-cart:1.0.0-15
           resources:
             limits:
               memory: "256Mi"
