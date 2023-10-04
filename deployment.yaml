@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: day-3-app
+spec:
+  selector:
+    matchLabels:
+      app: day-3-app
+  template:
+    metadata:
+      labels:
+        app: day-3-app
+    spec:
+      containers:
+        - name: day-3-app
+          image: test5532/shopping-cart:${IMAGE_TAG}
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8070
